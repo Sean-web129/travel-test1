@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="zh-CN"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1">&lt;title&gt;旅行前做这个测试 — Travel Compatibility Test&lt;/title&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>:root{--accent:#ff5a78;--muted:#666;--card-bg:#fff;--card-border:#eee}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;margin:0;padding:18px;background:#fafafa;color:#111}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.wrap{max-width:980px;margin:12px auto;padding:18px;background:var(--card-bg);border:1px solid var(--card-border);border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.03)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>header{display:flex;justify-content:space-between;align-items:center;gap:12px}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h1{margin:0;font-size:20px;color:var(--accent)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>p.lead{margin:6px 0 16px;color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.lang-switch{display:flex;gap:8px}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.lang-switch button{padding:6px 10px;border-radius:8px;border:1px solid #eee;background:#fff;cursor:pointer}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.lang-switch .active{background:var(--accent);color:#fff;border-color:var(--accent)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.question{margin:12px 0;padding:10px;border-radius:10px;background:#fff;border:1px solid #f2f2f2}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.q-title{font-weight:600;margin-bottom:8px}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.q-sub{font-size:13px;color:var(--muted);margin-bottom:8px}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.scale{display:flex;gap:8px}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.scale label{flex:1;padding:8px;text-align:center;border-radius:8px;border:1px solid #eee;background:#fafafa;cursor:pointer;user-select:none}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.scale input{display:none}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.scale input:checked + span{background:linear-gradient(180deg,#fff0f6,#ffe6ef);border-color:var(--accent)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.controls{display:flex;gap:10px;margin-top:14px}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>button.primary{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>button.secondary{background:#f3f3f3;padding:10px 14px;border-radius:10px;border:0;cursor:pointer}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.result{margin-top:16px;padding:14px;border-radius:10px;background:#fff7fb;border:1px solid #ffdce6}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.small{font-size:13px;color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>footer{margin-top:14px;font-size:12px;color:var(--muted)}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>@media (max-width:640px){ .scale{flex-direction:row} .wrap{padding:12px} h1{font-size:18px}}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;div class="wrap" id="app"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 id="title-zh"&gt;旅行前做这个测试，看看你们是不是合拍&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;h1 id="title-en" style="display:none"&gt;Take this test before travel — Are you compatible?&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="lead" id="lead-zh"&gt;50道题，总分100。每题0-2分。完成后查看旅行合拍度。&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="lead" id="lead-en" style="display:none"&gt;50 questions — full score 100. Each item 0–2 points. See your travel compatibility after finishing.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="lang-switch" aria-hidden&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="btn-en"&gt;EN&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="btn-zh" class="active"&gt;中文&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;form id="quiz"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Questions list: 50 bilingual items --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Each question uses values 0,1,2. --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- We'll generate q1..q50 --&gt;</p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">const questions = [</p>
+<p class="p1">["我和旅伴对旅行预算的期望一致。","Me and my travel partner agree on travel budget expectations."],</p>
+<p class="p1">["我喜欢随机改变计划，旅伴也能接受。","I like changing plans spontaneously and my partner accepts it."],</p>
+<p class="p1">["我们对住宿标准（干净、舒适）有相似要求。","We have similar expectations on accommodation standards (clean, comfortable)."],</p>
+<p class="p1">["我喜欢行程满档，旅伴也享受忙碌的行程。","I prefer packed itineraries and my partner enjoys busy schedules."],</p>
+<p class="p1">["我和旅伴对饮食偏好（口味、忌口）能互相适应。","We can adapt to each other's food preferences/restrictions."],</p>
+<p class="p1">["在突发状况（交通延误、丢东西）时我们能冷静协作。","We stay calm and cooperate when things go wrong (delays, lost items)."],</p>
+<p class="p1">["我喜欢独自探索一会儿，旅伴不会不悦。","I enjoy exploring alone sometimes and my partner doesn't mind."],</p>
+<p class="p1">["我们对购物和纪念品的花费有相似的期望。","We have similar expectations on shopping &amp; souvenirs spending."],</p>
+<p class="p1">["我愿意为旅伴调整活动节奏。","I'm willing to adjust pace for my partner."],</p>
+<p class="p1">["我们对休息与玩乐的平衡看法一致。","We agree on the balance between rest and activities."],</p>
+<p class="p1">["旅途中我不会过度依赖旅伴来做决策。","I don't rely excessively on my partner to make decisions during the trip."],</p>
+<p class="p1">["我们对安全与冒险的接受度相近。","Our acceptance of risk vs safety is similar."],</p>
+<p class="p1">["我愿意与旅伴平均分担行程安排工作。","I'm willing to share trip planning duties equally with my partner."],</p>
+<p class="p1">["旅途中遇到小摩擦时，我们能快速和好。","We can reconcile quickly after small conflicts on trip."],</p>
+<p class="p1">["我们在旅行节奏（慢旅行/快旅行）上能达成共识。","We can agree on travel pace (slow vs fast travel)."],</p>
+<p class="p1">["对长时间一起相处我们都能保持个人空间。","We can both maintain personal space during long periods together."],</p>
+<p class="p1">["旅途中突发健康问题时对方会负责任照顾。","Partner takes responsibility to care during health issues on trip."],</p>
+<p class="p1">["我们对旅途中拍照和隐私的界限一致。","We share similar boundaries about photos and privacy while traveling."],</p>
+<p class="p1">["我和旅伴对必须参加的景点优先级一致。","We agree on priority of must-see attractions."],</p>
+<p class="p1">["我们对使用手机/社交媒体的频率没有冲突。","We don't conflict over phone/social media usage frequency."],</p>
+<p class="p1">["我们对驾驶或搭乘交通工具的安全标准相近。","We have similar safety standards for driving/transport."],</p>
+<p class="p1">["旅途中出现行李问题时我们能共同解决。","We solve luggage/problems together when they appear."],</p>
+<p class="p1">["我愿意听从旅伴的建议去体验新事物。","I'm willing to follow partner's suggestions to try new things."],</p>
+<p class="p1">["我们对迟到或等待的忍耐度相当。","Our tolerance for lateness or waiting is comparable."],</p>
+<p class="p1">["我和旅伴对夜生活的偏好相近。","We have similar preferences for nightlife."],</p>
+<p class="p1">["我们在旅途中有相同的卫生与清洁习惯要求。","We have similar hygiene and cleanliness habits on trip."],</p>
+<p class="p1">["我们对行程中购物与观光的时间分配能达成一致。","We can agree on time allocation between shopping and sightseeing."],</p>
+<p class="p1">["旅途中意见分歧时我们能用沟通解决而不是争吵。","We resolve disagreements by communication, not arguing."],</p>
+<p class="p1">["我们在选择餐厅或活动上不会互相强迫。","We don't force each other when picking restaurants/activities."],</p>
+<p class="p1">["对旅行中的花费我们能坦诚沟通与分担。","We can openly discuss and share travel expenses."],</p>
+<p class="p1">["我和旅伴都能接受临时更改计划的情况。","We both accept last-minute plan changes."],</p>
+<p class="p1">["我们对旅行目的（放松、探险、文化）有共同期待。","We share similar expectations about the trip's purpose (relaxation, adventure, culture)."],</p>
+<p class="p1">["我们在等待排队或登机时都能保持耐心。","We both stay patient when waiting in lines or boarding."],</p>
+<p class="p1">["我和旅伴在处理语言或沟通障碍时互相支持。","We support each other when facing language or communication barriers."],</p>
+<p class="p1">["旅途中如果资金紧张，我们能一起调整并共担。","If money becomes tight, we adjust and share responsibilities together."],</p>
+<p class="p1">["我们对纪念品选择不会因为审美差异产生重大分歧。","We don't have major disagreements about souvenirs due to taste differences."],</p>
+<p class="p1">["我愿意尊重旅伴的文化或宗教禁忌。","I'm willing to respect partner's cultural or religious restrictions."],</p>
+<p class="p1">["我们能接受旅程中出现的临时小意外（天气、关闭景点）。","We can accept small unexpected events (weather, closed sites)." ],</p>
+<p class="p1">["我们的生物钟（早起/晚睡）比较匹配。","Our sleep schedules (early riser/night owl) are reasonably compatible."],</p>
+<p class="p1">["我和旅伴对旅行节奏的期待不会不断改变。","Our expectations for travel rhythm don't change unpredictably."],</p>
+<p class="p1">["旅途中我们能公平分担驾驶或导航任务。","We fairly share driving or navigation duties on the trip."],</p>
+<p class="p1">["我和旅伴对尝试当地食物的开放程度相似。","We have similar openness to trying local foods."],</p>
+<p class="p1">["旅途中我会主动承担解决问题的责任。","I take initiative to solve problems during travel."],</p>
+<p class="p1">["我们对购物退换货或讨价还价的方式态度相近。","We have similar attitudes toward returns or bargaining while shopping."],</p>
+<p class="p1">["旅途中我能给旅伴必要的情绪支持。","I can provide needed emotional support to my partner during travel."],</p>
+<p class="p1">["我们对于紧凑行程中的休息安排有一致意见。","We agree on rest arrangements within a tight schedule."],</p>
+<p class="p1">["旅途中我和旅伴都尊重彼此的隐私与个人物品。","We both respect each other's privacy and personal belongings."],</p>
+<p class="p1">["在需要做决定时我们能快速达成一致。","We can quickly reach agreement when decisions are needed."],</p>
+<p class="p1">["旅行结束后我们对回忆与总结的方式看法相似。","We have similar ways of reflecting and remembering the trip afterward."]</p>
+<p class="p1">];</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="questions-container"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button type="button" id="calc" class="primary"&gt;提交并查看结果 / Submit &amp; View&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button type="button" id="reset" class="secondary"&gt;重置 / Reset&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/form&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="output" style="margin-top:12px"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="small" id="disclaimer-zh"&gt;仅供参考和娱乐，不作为专业心理诊断。&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="small" id="disclaimer-en" style="display:none"&gt;For insight/entertainment only — not a professional diagnosis.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// render questions dynamically</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const container = document.getElementById('questions-container');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>questions.forEach((pair, idx) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const i = idx+1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const q = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>q.className = 'question';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>q.innerHTML = `</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-title" data-zh&gt;${i}. ${pair[0]}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="q-sub" data-en style="display:none"&gt;${i}. ${pair[1]}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="scale" aria-hidden&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="0"&gt;&lt;span data-zh&gt;0 不同意 / 0 Disagree&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="1"&gt;&lt;span data-zh&gt;1 中立 / 1 Neutral&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;&lt;input type="radio" name="q${i}" value="2"&gt;&lt;span data-zh&gt;2 同意 / 2 Agree&lt;/span&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>container.appendChild(q);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// language toggle</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const btnEn = document.getElementById('btn-en');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const btnZh = document.getElementById('btn-zh');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function setLang(lang){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const showZh = (lang === 'zh');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('[data-zh]').forEach(el =&gt; el.style.display = showZh ? '' : 'none');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.querySelectorAll('[data-en]').forEach(el =&gt; el.style.display = showZh ? 'none' : '');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('title-zh').style.display = showZh ? '' : 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('lead-zh').style.display = showZh ? '' : 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('disclaimer-zh').style.display = showZh ? '' : 'none';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('title-en').style.display = showZh ? 'none' : '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('lead-en').style.display = showZh ? 'none' : '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('disclaimer-en').style.display = showZh ? 'none' : '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btnZh.classList.toggle('active', showZh);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btnEn.classList.toggle('active', !showZh);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>localStorage.setItem('rpi_lang', lang);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// default: zh if browser language contains zh, otherwise en</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const saved = localStorage.getItem('rpi_lang');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(saved) { setLang(saved); } else {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const isZh = navigator.language &amp;&amp; navigator.language.toLowerCase().includes('zh');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setLang(isZh ? 'zh' : 'en');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btnEn.addEventListener('click', ()=&gt; setLang('en'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btnZh.addEventListener('click', ()=&gt; setLang('zh'));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// scoring &amp; interpretation</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function readValue(name){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const el = document.querySelector('input[name="'+name+'"]:checked');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return el ? Number(el.value) : null;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function calcScore(){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const names = Array.from({length:questions.length}, (_,i)=&gt;'q'+(i+1));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for(const n of names){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(readValue(n) === null){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>alert( (localStorage.getItem('rpi_lang') === 'en' ? 'Please answer all questions.' : '请回答所有问题。') );</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return null;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let total = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for(const n of names) total += readValue(n);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// total max = questions.length * 2 = 100 (when 50 q)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return total;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function interpret(score, lang){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const pct = Math.round((score / (questions.length*2)) * 100);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(lang === 'zh'){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(pct &gt;= 80) return {title:'非常合拍','desc':`得分 ${score}/100 — 非常合拍，适合一起旅行（${pct}%）`};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(pct &gt;= 60) return {title:'较为合拍','desc':`得分 ${score}/100 — 较为合拍，旅行中能良好配合（${pct}%）`};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(pct &gt;= 40) return {title:'存在差异','desc':`得分 ${score}/100 — 存在一些差异，建议提前沟通（${pct}%）`};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return {title:'可能不太合拍','desc':`得分 ${score}/100 — 可能不太合拍，出发前多沟通以避免摩擦（${pct}%）`};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(pct &gt;= 80) return {title:'Highly compatible','desc':`${score}/100 — Highly compatible; great fit for traveling together (${pct}%)`};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(pct &gt;= 60) return {title:'Fairly compatible','desc':`${score}/100 — Fairly compatible; should coordinate well during travel (${pct}%)`};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(pct &gt;= 40) return {title:'Some differences','desc':`${score}/100 — Some differences; recommend discussing key points before travel (${pct}%)`};</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return {title:'Low compatibility','desc':`${score}/100 — Low compatibility; talk more before you go to avoid friction (${pct}%)`};</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('calc').addEventListener('click', ()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const score = calcScore();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(score === null) return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const lang = localStorage.getItem('rpi_lang') === 'en' ? 'en' : 'zh';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const interp = interpret(score, lang);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const out = document.getElementById('output');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>out.innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const box = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box.className = 'result';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const title = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>title.innerHTML = `&lt;strong&gt;${interp.title}&lt;/strong&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box.appendChild(title);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const desc = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>desc.style.marginTop = '8px';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>desc.innerHTML = `&lt;div&gt;${interp.desc}&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box.appendChild(desc);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const tips = document.createElement('div');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tips.style.marginTop = '10px';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(lang === 'zh'){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tips.innerHTML = `&lt;div class="small"&gt;&lt;strong&gt;小建议：&lt;/strong&gt;出发前就预算、节奏、饮食与作息等关键点沟通。遇到突发情况时约定处理方式。&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tips.innerHTML = `&lt;div class="small"&gt;&lt;strong&gt;Tips:&lt;/strong&gt; Discuss budget, pace, meals and sleep schedule before departure. Agree on how to handle unexpected issues.&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box.appendChild(tips);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const btn = document.createElement('button');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.className = 'primary';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.style.marginTop = '12px';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.textContent = (lang === 'zh') ? '打印 / 保存结果' : 'Print / Save Report';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btn.onclick = ()=&gt; window.print();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>box.appendChild(btn);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>out.appendChild(box);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// optionally store result in localStorage (no backend)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>localStorage.setItem('rpi_last_score', score);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>localStorage.setItem('rpi_last_time', new Date().toISOString());</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('reset').addEventListener('click', ()=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('quiz').reset();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('output').innerHTML = '';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
